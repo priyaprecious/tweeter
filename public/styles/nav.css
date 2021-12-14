@@ -10,6 +10,7 @@
     align-items: center;
     font-weight: normal;
     position: fixed;
+    z-index: 1;
 }
 
 .navbar-top span {
