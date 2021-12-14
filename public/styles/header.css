@@ -1,25 +1,26 @@
 .header {
-    /* height: 400px;
-    width: 100%;
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
-    align-items: center;
-    position: relative; 
-    background-color: #eb6600;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");*/
-
-    height:400px;
-    width:100%;
-    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items:center;
-    background-color:orange ;
-    margin-bottom: 20px;
+    align-items: center;
+    position: -1;
+    background-color: #eb6e00;
+    background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+    height: 400px;
+    width: 100%;    
 }
 
 .h2 {
+    display: flex;
+    font-size: 28px;
+    font-weight: lighter;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    font-weight: 200;
+    font-style: normal;
+}
+
+.bold {
+    font-weight: bold;
 }
