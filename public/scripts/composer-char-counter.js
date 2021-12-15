@@ -1,10 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // --- our code goes here ---
-    $("#tweet-text").on("keyup",function() {
+    $("#tweet-text").on("keyup", function () {
         const valLength = $(this).val().length
-        const limit = 140 
+        const limit = 140
         const charLeft = limit - valLength;
-        //$(".counter").html(charLeft)
         const counter = $(this).next().children()[1]
         $(counter).html(charLeft)
         if (charLeft < 0) {
@@ -14,4 +13,4 @@ $(document).ready(function() {
             $(counter).css("color", "black")
         }
     });
-  });
+});
