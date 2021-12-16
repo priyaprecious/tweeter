@@ -3,15 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function () {
+$(document).ready(function() {
     // $("#submit-tweet").on("submit",onSubmit);
 
-    const data = [
-        {
+    const data = [{
             "user": {
                 "name": "Newton",
-                "avatars": "https://i.imgur.com/73hZDYK.png"
-                ,
+                "avatars": "https://i.imgur.com/73hZDYK.png",
                 "handle": "@SirIsaac"
             },
             "content": {
@@ -31,11 +29,11 @@ $(document).ready(function () {
             "created_at": 1461113959088
         }
     ]
-    const renderTweets = function (userData) {
+    const renderTweets = function(userData) {
         for (let tweet of userData) {
             //console.log(userData)
             const $newTweet = createTweetElement(tweet)
-            // renderTweets(data);
+                // renderTweets(data);
             $("#tweet-container").prepend($newTweet)
         }
         // loops through tweets
@@ -43,7 +41,7 @@ $(document).ready(function () {
         // takes return value and appends it to the tweets container
     }
 
-    const createTweetElement = function (tweet) {
+    const createTweetElement = function(tweet) {
         console.log(tweet)
         let $tweethtml = `<article class="tweet-article">
       <header class="tweet-header">
@@ -83,17 +81,23 @@ $(document).ready(function () {
     renderTweets(data);
 
     // const onSubmit = function(event) {
-    $("#submit-tweet").on("submit", function (event) {
+    $("#submit-tweet").submit(function(event) {
         event.preventDefault();
-        console.log("typing");
-        $.ajax("/tweets", { method: "POST", data: $("#submit-tweet").serialize() })
-            .then((data) => {
-                console.log("data", data);
-            }).catch(err =>
-                console.log("ERORR: ", err))
+
+        // $.ajax("/tweets", { method: "POST", data: $("#submit-tweet").serialize() })
+        //     .then((data) => {
+        //         console.log("data", data);
+        //     }).catch(err =>
+        //         console.log("ERORR: ", err))
+        $.ajax({
+            type: "POST",
+            url: `/tweets`,
+            data: $('form').serialize()
+        });
+        console.log("hi");
 
 
     });
 });
 
-    //  ${jQuery.timeago(Date.now())}
+//  ${jQuery.timeago(Date.now())}
