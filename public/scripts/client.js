@@ -61,12 +61,19 @@ $(document).ready(function() {
 
     $("#submit-tweet").submit(function(event) {
         event.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: `/tweets`,
-            data: $('form').serialize(),
-            success: loadTweets()
-        });
+        const tweet = $('#tweet-text').val().length;
+        if (tweet === 0) {
+            window.alert("please enter a valid url");
+        } else if (tweet > 140) {
+            window.alert("tweet is greater than 140 characters");
+        } else {
+            $.ajax({
+                type: "POST",
+                url: `/tweets`,
+                data: $('form').serialize(),
+                success: loadTweets()
+            });
+        }
     });
     loadTweets(tweetsUrl);
 });
