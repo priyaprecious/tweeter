@@ -33,10 +33,10 @@ $(document).ready(function () {
     ]
     const renderTweets = function (userData) {
         for (let tweet of userData) {
-            console.log(userData)
+            //console.log(userData)
             const $newTweet = createTweetElement(tweet)
             // renderTweets(data);
-            $(".tweet-container").prepend($newTweet)
+            $("#tweet-container").prepend($newTweet)
         }
         // loops through tweets
         // calls createTweetElement for each tweet
