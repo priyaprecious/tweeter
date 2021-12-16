@@ -71,9 +71,9 @@ $(document).ready(function() {
         event.preventDefault();
         const tweet = $('#tweet-text').val().length;
         if (tweet === 0) {
-            window.alert("please enter a valid url");
+            $(".error-empty").slideDown('slow').hide(3500);
         } else if (tweet > 140) {
-            window.alert("tweet is greater than 140 characters");
+            $(".error-long").slideDown('slow').hide(3500);
         } else {
             $.ajax({
                 type: "POST",
