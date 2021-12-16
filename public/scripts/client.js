@@ -53,6 +53,8 @@ $(document).ready(function() {
 
     const loadTweets = function(url) {
         $.get(url, { dataType: "json" }).then(renderTweets);
+        document.querySelector("#tweet-text").value = '';
+        document.querySelector(".counter").innerHTML = 140;
     };
 
 
@@ -70,8 +72,9 @@ $(document).ready(function() {
             $.ajax({
                 type: "POST",
                 url: `/tweets`,
-                data: $('form').serialize(),
-                success: loadTweets()
+                data: $('form').serialize()
+            }).then(function() {
+                loadTweets(tweetsUrl);
             });
         }
     });
