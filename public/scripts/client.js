@@ -7,6 +7,12 @@ $(document).ready(function() {
 
     const tweetsUrl = "http://localhost:8080/tweets";
 
+    const escape = function(str) {
+        let div = document.createElement("div");
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    };
+
     const renderTweets = function(userData) {
         for (let tweet of userData) { // loops through tweets
             const $newTweet = createTweetElement(tweet) // calls createTweetElement for each tweet
@@ -29,7 +35,7 @@ $(document).ready(function() {
     
       </header>
       <div class="tweet-body">
-        <p class="tweet-content">${tweet.content.text}</p>
+        <p class="tweet-content">${escape(tweet.content.text)}</p>
     
       </div>
       <div class="divider">
