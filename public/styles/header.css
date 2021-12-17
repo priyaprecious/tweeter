@@ -1,26 +1,102 @@
-.header {
+/* .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
     align-items: center;
-    position: -1;
     background-color: #eb6e00;
     background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
-    height: 400px;
-    width: 100%;    
+    height: 500px;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
-.h2 {
+@media only screen and (min-width: 1024px) {
+    .header-container {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header {
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        height: 50%;
+        width: 60%;
+        margin-bottom: 0;
+    }
+    .header h2 {
+        margin: 0;
+        margin-top: -60px;
+    }
+    .header img {
+        margin-top: 2em;
+        width: 100%;
+        height: 65%;
+    }
+    .tweet-div {
+        display: flex;
+        flex-direction: row;
+        margin-top: 90px;
+        justify-content: space-between;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .container {
+        width: 59%;
+        margin-right: 1em;
+    }
+} */
+
+header.main-header {
+    height: 500px;
+    width: 100%;
     display: flex;
-    font-size: 28px;
-    font-weight: lighter;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    color: white;
-    font-style: normal;
+    background-color: orange;
+    margin-bottom: 20px;
 }
 
-.bold {
-    font-weight: bold;
+
+/* Desktop styles */
+
+@media only screen and (min-width: 1024px) {
+    .header-container {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+    }
+    header.main-header {
+        width: 60%;
+        /* height: 50%; */
+        justify-content: space-around;
+        align-items: center;
+        /* margin-bottom: 0; */
+    }
+    header.main-header h2 {
+        margin: 0;
+        margin-top: -100px;
+    }
+    header.main-header img {
+        margin-top: 2em;
+        width: 100%;
+        height: 65%;
+    }
+    .container {
+        width: 59%;
+        margin-right: 1em;
+    }
+    .tweet-div {
+        display: flex;
+        flex-direction: row;
+        margin-top: 90px;
+        justify-content: space-between;
+    }
+    nav {
+        background-color: #4056a1;
+    }
 }
