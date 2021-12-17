@@ -16,8 +16,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 !["initial page"](#)
 
-!["post new tweet"](#)
-
 !["empty tweet"](#)
 
 !["characters more than 140"](#)
