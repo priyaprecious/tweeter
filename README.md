@@ -14,11 +14,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["initial page"](#)
+!["initial page"](https://github.com/priyaprecious/tweeter/blob/master/docs/Initial-page.png?raw=true)
 
-!["empty tweet"](#)
+!["empty tweet"](https://github.com/priyaprecious/tweeter/blob/master/docs/empty-tweet.png?raw=true)
 
-!["characters more than 140"](#)
+!["characters more than 140"](https://github.com/priyaprecious/tweeter/blob/master/docs/chararcters%20length%20more%20than%20140.png?raw=true)
 
 ## Dependencies
 
