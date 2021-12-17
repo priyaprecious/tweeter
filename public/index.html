@@ -59,9 +59,11 @@
         <main class="container">
             <section class="new-tweet">
                 <form class="form" method="POST" action="/tweets" id="submit-tweet">
+                    <!-- form validation if textarea is empty-->
                     <p for="validation" class="error-empty">
                         Empty Tweet!
                     </p>
+                    <!-- form validation if number of characters entered is more than 140-->
                     <p for="validation" class="error-long">
                         Tweet Exceeding 140 Characters!
                     </p>

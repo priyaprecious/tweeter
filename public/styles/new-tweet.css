@@ -5,6 +5,9 @@
     font-weight: bold;
 }
 
+
+/* tweet button to submit the tweet */
+
 .tweetbutton {
     flex-direction: row;
     justify-content: space-between;
@@ -17,6 +20,9 @@
     color: white;
 }
 
+
+/* text area where user enters the tweet */
+
 #tweet-text {
     background-color: inherit;
     border-style: solid;
@@ -28,17 +34,8 @@
 }
 
 #tweet-container {
-    /* border: 5px solid #545149; */
-    /* width: 90%; */
-    /* margin: auto; */
     margin-top: 1em;
-    /* padding: 1em; */
 }
-
-
-/* .tweet-container:hover {
-    box-shadow: 5px 5px royalblue;
-} */
 
 .tweet-header {
     display: flex;
@@ -106,9 +103,15 @@
     padding: 0.6em;
 }
 
+
+/* when mouse hovers a particular tweet box */
+
 .tweet-article:hover {
     box-shadow: 5px 10px #888888;
 }
+
+
+/* if textarea is empty or if number of characters is more than 140  */
 
 .error-empty,
 .error-long {

@@ -10,12 +10,18 @@ nav {
     font-size: 30px;
 }
 
+
+/* tweeter title */
+
 .nav-title {
     font-family: "Bungee";
     padding-left: 1.5em;
     padding-right: 1.5em;
     padding-top: 1.75em;
 }
+
+
+/* the right part of the nav bar */
 
 .rightside-nav {
     display: flex;
@@ -26,6 +32,9 @@ nav {
     padding-right: 1.5em;
     padding-top: 1.85em;
 }
+
+
+/* double down arrow  */
 
 nav .fas {
     margin-left: 3.4em;
