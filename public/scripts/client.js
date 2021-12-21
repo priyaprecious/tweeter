@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-$(document).ready(function() {
+$(() => {
     // URL to fetch tweets
     const tweetsUrl = "http://localhost:8080/tweets";
 
@@ -16,6 +16,7 @@ $(document).ready(function() {
 
     // to render tweets
     const renderTweets = function(userData) {
+        $("#tweet-container").empty();
         for (let tweet of userData) { // loops through tweets
             const $newTweet = createTweetElement(tweet); // calls createTweetElement for each tweet
             $("#tweet-container").prepend($newTweet); // takes return value and appends it to the tweets container
